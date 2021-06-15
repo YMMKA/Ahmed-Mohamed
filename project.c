@@ -90,6 +90,7 @@ return validName;
   void
 displayAll (ListNodePtr currentPtr) 
 {
+	  int count=1;
   
 // if list is empty
     if (isEmpty (currentPtr))
@@ -110,18 +111,16 @@ puts ("List is empty.\n");
 	{
 	  
  
-printf ("Bookname:%s\n", currentPtr->l.bookname);
-	  
-printf ("Book Id:%d\n", currentPtr->l.id);
-	  
-printf ("Book author:%s\n", currentPtr->l.author);
-	  
-printf ("Book price:%f\n\n", currentPtr->l.price);
+printf("\t\t\t-------------------BOOK(%d)----------------------\n\n\n",count);
+            printf("\t\t\t\t\tBookname:%s\n", currentPtr->l.bookname);
+            printf("\t\t\t\t\tBook Id:%d\n",currentPtr->l.id);
+            printf("\t\t\t\t\tBook author:%s\n",currentPtr->l.author);
+            printf("\t\t\t\t\tBook price:%f\n\n",currentPtr->l.price);
 	  
 currentPtr = currentPtr->nextPtr;
-	
+	count++;
 }
     
 }
-
+count=1;
 }
